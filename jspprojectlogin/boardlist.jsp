@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import = "java.sql.*"%>
 <%
-//DBCP를 사용하여 DB 연동
 	//1. jdbc driver 등록
 	Class.forName("org.mariadb.jdbc.Driver");
 	//2. db 와 연결 (Connection) 생성
@@ -11,13 +10,13 @@
 	
 	Connection con = DriverManager.getConnection(url,user,password);
 	//3. DB 연동
-	String sql = "select id,name,pwd from login";
+	String sql = "select id,title,date from board";
 	Statement stmt = con.createStatement();
 	ResultSet rs = stmt.executeQuery(sql);
 	//4. 결과 셋에서 데이터 추출하기
 	String id = "";
-	String name = "";
-	String pwd = "";
+	String title = "";
+	String date = "";
 %>	
 <!DOCTYPE html>
 <html>
@@ -28,25 +27,25 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<title>DB 연결</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<table class="table table-striped">
 		<tr>
-			<th>id</th>
-			<th>name</th>
-			<th>pwd</th>
+			<th>작성자</th>
+			<th>제목</th>
+			<th>날짜</th>
 		</tr>
 		<tr>
 <%
 	while(rs.next()){
 		id = rs.getString("id");
-		name = rs.getString("name");
-		pwd = rs.getString("pwd");
+		title = rs.getString("title");
+		date = rs.getString("date");
 %>
-	<td><a href="updateForm.jsp?id=<%=id %>"><%=id %></a></td>
-	<td><%=name %></td>
-	<td><%=pwd %></td>
+	<td><%=id %></td>
+	<td><a href="boardupdateForm.jsp?id=<%=id %>"><%=title %></a></td>
+	<td><%=date %></td>
 	</tr>
 	
 	<%}

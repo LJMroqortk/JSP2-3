@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import = "java.sql.*"%>
 <%
-//DBCP를 사용하여 DB 연동
 	//1. jdbc driver 등록
 	Class.forName("org.mariadb.jdbc.Driver");
 	//2. db 와 연결 (Connection) 생성
@@ -9,7 +8,7 @@
 	String user = "leejumyeong";
 	String password = "1111";
 	
-	Connection con = DriverManager.getConnection(url,user,password);
+	 Connection con = DriverManager.getConnection(url, user, password);
 	//3. DB 연동
 	String sql = "select id,name,pwd from login";
 	Statement stmt = con.createStatement();
