@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../owlcarousel/assets/owl.theme.default.css">
+  
+<title>게임 커뮤니티 사이트</title>
+<style type="text/css">
+	 /* RollingBanner 구현 파트 설정  */
+	 .main_banner {
+	 	position: relative;
+	 	left: 20px;
+    	top: 200px;
+    	width: 1000px;
+    	height: 250px;
+	 }
+	 /*메인배너 왼쪽 버튼*/
+	 .main_banner .owl-prev {
+	 	position: absolute;
+	 	top: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	width: 100px;
+	 	outline: none;
+	 }
+	 /*메인배너 왼쪽 버튼 이후 상태*/
+	 .main_banner .owl-prev::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -328px -651px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 /*메인배너 오른쪽 버튼*/
+	 .main_banner .owl-next {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	outline: none;
+	 	width: 100px;
+	 }
+	 /*메인배너 오른쪽 버튼 이후 상태*/
+	 .main_banner .owl-next::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -1056px -369px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 .main_banner .item {
+	 	padding-top: 250px;
+	 	height: 800px;
+	 	box-sizing: border-box;
+	 	color: #fff;
+	 	text-align: center;
+	 }
+	 .main_banner .item.first {
+	 	background: no-repeat url("../images/first1.png");
+	 }
+	 .main_banner .item.second {
+	 	background: no-repeat url("../images/second2.png");
+	 }
+	 .main_banner .item.third {
+	 	background: no-repeat url("../images/third3.png");
+	 }
+	 .main_banner .item .title {
+	 	display: inline-block;
+	 	vertical-align: text-top;
+	 	line-height: 60px;
+	 	font-size: 50px;
+	 	letter-spacing: -2.5px;
+	 	font-weight: normal;
+	 	position: relative;
+	 	top: -200px;
+	 }
+	 .main_banner .item .title .em {
+	 	display: block;
+	 }
+	 /*
+	 .main_banner .item .title::before {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: -55px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "[";
+	 }
+	 .main_banner .item .title::after {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: 755px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "]";
+	 }
+	 */
+	 .main_banner .item .subtitle{
+	 	display: block;
+	 	vertical-align: top;
+	 	margin-top: 20px;
+	 	font-size: 24px;
+	 	line-height: normal;
+	 	letter-spacing: -1.2px;
+	 	position: relative;
+	 	top: -220px;
+	 }
+	 
+	 @media screen and (max-width: 998px){
+	 	.main_banner {
+	 		height: 654px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 654px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 35px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 }
+	 @media screen and (max-width: 768px){
+	 	.main_banner {
+	 		height: 654px;
+	 	}
+	 	.main_banner .item{
+	 		padding-top: 250px;
+	 		height: 654px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 30px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 20px;
+	 	}
+	 }
+	 	 @media screen and (max-width: 475px){
+	 	.main_banner {
+	 		height: 654px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 654px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 24px;
+	 		line-height: 40px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		top: 20px;
+	 		font-size: 70px;
+	 	}
+	 	.main_banner .item .title::before{
+	 		left: -30px;
+	 	}
+	 	.main_banner .item .title::after{
+	 		right: -30px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 16px;
+	 	}
+	 }
+	 /* 3D 버튼 CSS 구현 파트 설정  */
+	.button-3d {
+	  position:relative;
+	  width: auto;
+	  display:inline-block;
+	  color:#ecf0f1;
+	  text-decoration:none;
+	  border-radius:5px;
+	  border:solid 1px #f39c12;
+	  background:#e67e22;
+	  text-align:center;
+	  padding:10px 12px 8px;
+	  margin: 6px;
+	  
+	  -webkit-transition: all 0.1s;
+		-moz-transition: all 0.1s;
+		transition: all 0.1s;
+		
+	  -webkit-box-shadow: 0px 6px 0px #d35400;
+	  -moz-box-shadow: 0px 6px 0px #d35400;
+	  box-shadow: 0px 6px 0px #d35400;
+	}
+	
+	.button-3d:active{
+	    -webkit-box-shadow: 0px 2px 0px #d35400;
+	    -moz-box-shadow: 0px 2px 0px #d35400;
+	    box-shadow: 0px 2px 0px #d35400;
+	    position:relative;
+	    top:4px;
+	}
+	/* 초기 배경 색깔 설정 */
+	body{
+		background-color: #0b0e2c;
+	}
+	/* 상위 배너 및 검색바 위치 및 스타일 설정  */
+    #webbanner{
+    	position: absolute;
+    	left: 200px;
+    }
+    #searchinput{
+    	position: absolute;
+    	left: 1100px;
+    	top: 75px;
+    	width: 300px;
+    	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    #searchicon{
+    	position: absolute;
+    	left: 1050px;
+    	top: 70px;
+    }
+    /*공지사항 배너 스타일 설정*/
+    #benana {
+    	position: absolute;
+    }
+    #main{
+    	border-radius: 20px;
+    	position: absolute;
+    	left: 20px;
+    	top: 480px;
+     	width: 1000px;
+     	height: 500px;
+        background-color:#DAA520;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    #login{
+    	padding-top: 1.5%;
+    	border-radius: 20px;
+    	position: absolute;
+    	left: 1050px;
+    	top: 200px;
+    	width: 450px;
+        height: 100px;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color:#F5DA81;
+    }
+    
+    #menu{
+    	border-radius: 20px;
+    	position: absolute;
+    	left: 1050px;
+    	top: 330px;
+    	width: 450px;
+        height:650px;
+        background-color:#20B2AA;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+ </style>
+</head>
+<body>
+        <div>
+        	<img id="webbanner" src="../images/Webben.png" alt="배너" width="800px" height="200px"/>
+        </div>
+        <div>
+        	   <img id="searchicon" alt="검색" src="../images/search.png" width="50px" height="50px">
+        	   <input id="searchinput" class="w3-input w3-border w3-round-large" type="text" placeholder="검색할 제목 혹은 아이디를 입력 하시오.">
+        </div>
+     		<div class="main_banner owl-carousel owl-theme">
+     			<div class="item first">
+     				<h2 class="title">5월 11일부터 6월 11까지 할인 중인 <strong class="em">인디 게임 지금 구매해서 즐겨보세요.</strong></h2>
+     				<span class="subtitle">인디 개발자의 꿈과 희망을 플레이해보세요!</span>
+     			</div>
+     			<div class="item second">
+     				<h2 class="title">마운트 블레이드 이벤트 진행중 <strong class="em">지금 구매해서 즐겨보세요.</strong></h2>
+     				<span class="subtitle">당신의 지휘로 다른 군을 이겨보세요!</span>
+     			</div>
+     			<div class="item third">
+     				<h2 class="title">이런 체험은 어떻시나요? <strong class="em">이 커뮤니티가 직접 추천합니다.</strong></h2>
+     				<span class="subtitle">저만 믿으라고요!</span>
+     			</div>
+     		</div>
+        <div id="main"></div>
+
+          <div id="login">
+          <div class="btn-group">
+          	<button type="button" class="button-3d" onclick="location.href='loginForm.jsp'"> 로그인</button>
+          	<button type="button" class="button-3d" onclick="location.href='insertForm.html'"> 회원가입</button>
+         	<button type="button" class="button-3d" onclick="location.href='list.jsp'" > 사용자조회</button>
+			</div>
+         </div>
+        <div id="menu">
+        	<button type="button" class="button-3d" onclick="location.href='board.jsp'" > 게시판 작성</button>
+			<button type="button" class="button-3d" onclick="location.href='boardlist.jsp'"> 게시판 목록</button>
+        </div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../owlcarousel/owl.carousel.min.js"></script>
+	<script src="../js/rollingbanner.js"></script>
+</html>
