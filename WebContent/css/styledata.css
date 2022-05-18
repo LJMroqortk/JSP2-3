@@ -1,0 +1,339 @@
+ /* RollingBanner 구현 파트 설정  */
+	 .main_banner {
+	 	position: relative;
+	 	left: 20px;
+    	top: 200px;
+    	width: 1000px;
+    	height: 250px;
+	 }
+	 /*메인배너 왼쪽 버튼*/
+	 .main_banner .owl-prev {
+	 	position: absolute;
+	 	top: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	width: 100px;
+	 	outline: none;
+	 }
+	 /*메인배너 왼쪽 버튼 이후 상태*/
+	 .main_banner .owl-prev::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -328px -651px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 /*메인배너 오른쪽 버튼*/
+	 .main_banner .owl-next {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	outline: none;
+	 	width: 100px;
+	 }
+	 /*메인배너 오른쪽 버튼 이후 상태*/
+	 .main_banner .owl-next::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -1056px -369px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 .main_banner .item {
+	 	padding-top: 250px;
+	 	height: 250px;
+	 	box-sizing: border-box;
+	 	color: #fff;
+	 	text-align: center;
+	 }
+	 .main_banner .item.first {
+	 	background: no-repeat url("../images/first1.png");
+	 }
+	 .main_banner .item.second {
+	 	background: no-repeat url("../images/second.png");
+	 }
+	 .main_banner .item.third {
+	 	background: no-repeat url("../images/third.png");
+	 }
+	 .main_banner .item .title {
+	 	display: inline-block;
+	 	vertical-align: text-top;
+	 	line-height: 60px;
+	 	font-size: 50px;
+	 	letter-spacing: -2.5px;
+	 	font-weight: normal;
+	 	position: relative;
+	 	top: -200px;
+	 }
+	 .main_banner .item .title .em {
+	 	display: block;
+	 }
+	 /*
+	 .main_banner .item .title::before {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: -55px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "[";
+	 }
+	 .main_banner .item .title::after {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: 755px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "]";
+	 }
+	 */
+	 .main_banner .item .subtitle{
+	 	display: block;
+	 	vertical-align: top;
+	 	margin-top: 20px;
+	 	font-size: 24px;
+	 	line-height: normal;
+	 	letter-spacing: -1.2px;
+	 	position: relative;
+	 	top: -220px;
+	 }
+	 
+	 @media screen and (max-width: 998px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 35px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 }
+	 @media screen and (max-width: 768px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 30px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 20px;
+	 	}
+	 }
+	 	 @media screen and (max-width: 475px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 24px;
+	 		line-height: 40px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		top: 20px;
+	 		font-size: 70px;
+	 	}
+	 	.main_banner .item .title::before{
+	 		left: -30px;
+	 	}
+	 	.main_banner .item .title::after{
+	 		right: -30px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 16px;
+	 	}
+	 }
+	 /* 3D 버튼 CSS 구현 파트 설정  */
+	.button-3d {
+	  position:relative;
+	  width: auto;
+	  display:inline-block;
+	  color:#ecf0f1;
+	  text-decoration:none;
+	  border-radius:5px;
+	  border:solid 1px #f39c12;
+	  background:#e67e22;
+	  text-align:center;
+	  padding:10px 12px 8px;
+	  margin: 6px;
+	  
+	  -webkit-transition: all 0.1s;
+		-moz-transition: all 0.1s;
+		transition: all 0.1s;
+		
+	  -webkit-box-shadow: 0px 6px 0px #d35400;
+	  -moz-box-shadow: 0px 6px 0px #d35400;
+	  box-shadow: 0px 6px 0px #d35400;
+	}
+	
+	.button-3d:active{
+	    -webkit-box-shadow: 0px 2px 0px #d35400;
+	    -moz-box-shadow: 0px 2px 0px #d35400;
+	    box-shadow: 0px 2px 0px #d35400;
+	    position:relative;
+	    top:4px;
+	}
+	/* 초기 배경 색깔 설정 */
+	body{
+		background-color: #0b0e2c;
+	}
+	/* 상위 배너 및 검색바 위치 및 스타일 설정  */
+    #webbanner{
+    	position: absolute;
+    	left: 200px;
+    }
+    #searchinput{
+    	position: absolute;
+    	left: 1100px;
+    	top: 75px;
+    	width: 300px;
+    	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    #searchicon{
+    	position: absolute;
+    	left: 1050px;
+    	top: 70px;
+    }
+    /*공지사항 배너 스타일 설정*/
+    #benana {
+    	position: absolute;
+    }
+    #main{
+    	font-family: 'Black Han Sans', sans-serif;
+    	border: solid 10px #483d8b;
+    	border-radius: 20px;
+    	position: absolute;
+    	left: 20px;
+    	top: 480px;
+     	width: 1000px;
+     	height: 500px;
+     	padding: 50px;
+        background-color:#20B2AA;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        overflow: auto;
+    }
+    #login{
+        font-family: 'Black Han Sans', sans-serif;
+        border: solid 10px #483d8b;
+    	padding: 10px;
+    	border-radius: 20px;
+    	position: absolute;
+    	left: 1050px;
+    	top: 200px;
+    	width: 450px;
+        height: 100px;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color:#F5DA81;
+    }
+    
+    #menu{
+    	border-radius: 20px;
+    	border: solid 10px #483d8b;
+    	position: absolute;
+    	text-align: center;
+    	left: 1050px;
+    	top: 330px;
+    	width: 450px;
+        height:650px;
+        background-color:#20B2AA;
+    }
+    #hrbar{
+		border: solid 10px;
+		margin: 3px;
+    }
+	#menubox{
+		border-radius: 10px;
+		font-family: 'Black Han Sans', sans-serif;
+		background-color: #f5a4aa;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		padding: 5px;
+		padding-bottom: 15px;
+	}
+    #insert{
+    	position: absolute;
+    	padding: 300px;
+    	left: 500px;
+    	top: 300px;
+    	background-color: silver;
+    }
+    .loginpage{
+    	position: relative;
+    	font-family: 'Black Han Sans', sans-serif;
+    	background-color:#20B2AA;
+    	border-radius: 100px;
+    	top:250px;
+    	left:602px;
+    	width: 300px;
+    	height: 530px;
+    	padding-top: 10px;
+    	text-align: center;
+    }
+    #side{
+    	margin: 10px;
+    	border-radius: 10px;
+    	text-align: center;
+    }
+    #login_box{
+    	border-radius: 100px;
+    	background-color: #f5a4aa;
+    	position: absolute;
+    	top: 200px;
+    	left: 550px;
+    	width: 400px;
+    	height: 600px;
+    	text-align: center;
+    }
+    #userlist{
+    	border-radius: 10px;
+    	background-color: #f5a4aa;
+    	position: absolute;
+    	padding: 50px;
+    	top: 300px;
+    	left: 300px;
+    	width: 900px;
+    	height: 400px;
+    	text-align: center;
+    	overflow: auto;
+    }
+    #userbox{
+    	border-radius: 10px;
+    	background-color: #8000ff;
+    	position: absolute;
+    	top: 200px;
+    	left: 300px;
+    	width: 900px;
+    	height: 100px;
+    	padding: 30px;
+    	text-align: center;
+    }
