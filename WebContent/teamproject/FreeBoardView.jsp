@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <% 
+    	// 유저 구별을 위한 체크을 위해 세션을 불러옵니다.
     	String usercheck = (String)session.getAttribute("checkid"); 
     %>
 <!DOCTYPE html>
@@ -20,6 +21,7 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+	<!-- 데이터를 가져와 변수에 집어넣어 줍니다. 그걸 기반으로 조건문을 달아서 현재 게시판 아이디와 동일한지만 체크해줍니다.  -->
 	<c:set var="checks" value="<%=usercheck%>"></c:set>
 	<jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
 		<c:if test="${checks eq dto.id}">
@@ -28,6 +30,7 @@
 		    	<input type="button" class = "btn btn-primary" value="삭제" onclick ="location.href='delete.fr?title=${dto.title}'">
 		    </div>
 		</c:if>
+	<!-- 버튼을 누를 시 자유게시판으로 돌아가게 했습니다. -->
 	<form action="FreeBoardList.fr" method="post">
 		
   	 <div>

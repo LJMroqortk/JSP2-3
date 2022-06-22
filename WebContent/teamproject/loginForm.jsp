@@ -18,7 +18,9 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+	<!-- 배너입니다.  -->
 	  <jsp:include page="/WEB-INF/view/default/defaultbanner.jsp"/>
+	  <!-- 로그인 시도 시에 컨트롤러에서 로그인을 처리한 후 OK 판단이 들어오면 세션과 함꼐 메인으로 돌아갑니다. 반대로 아니면 로그인화면으로 돌아옵니다. -->
 	<form action="loginPro.do" method="post">
 	<div id="login_box">
 		<h2 id="login_title">로그인</h2>

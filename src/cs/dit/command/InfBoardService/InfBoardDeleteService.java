@@ -14,7 +14,7 @@ public class InfBoardDeleteService implements InfBoardService {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String title = request.getParameter("title");
-		
+		//정보게시판의 해당 글을 삭제하는 코드입니다.
 		InfBoardDao dao = new InfBoardDao();
 		dao.delete(title);
 

@@ -148,7 +148,7 @@ select {
 
         <!-- content-->
         <div id="content">
-        
+        		<!-- 회원가입을 위한 부분입니다. insert.do는 컨트롤러에서 지정한 부분을 싱행시켜 DB에 회원정보를 집어 넣어주는 역할입니다. -->
                   <form name="SignUp" action="insert.do" method="post">
             <!-- ID -->
             <div>

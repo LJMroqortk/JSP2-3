@@ -16,6 +16,7 @@ public class deleteLogin implements LogSerivce {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
+		// 회원 정보를 삭제하는 Service 부분입니다.
 		MemberDto dto = (MemberDto)session.getAttribute("dtos");
 		MemberDao dao = new MemberDao();
 		dao.delete(dto.getId(), dto.getPassword());

@@ -8,7 +8,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <% 
+	//유저 상태를 유지하기 위해 로그인 처리 이후 저장시켜둔 세션을 불러옵니다.
 	String id = (String)session.getAttribute("userid");
+	//게시판에서 유저를 구별하기 위한 세션이지만 index로 나오면, 잠시나마라도 혼동이 없도록 안의 데이터는 소멸 시킵니다.
 	String usercheck = (String)session.getAttribute("checkid");
 	usercheck = "";
 %>
@@ -30,6 +32,7 @@
 <title>게임 커뮤니티 사이트</title>
 </head>
 <body>
+	<!-- 세션의 값을 가져와 데이터가 있으면 logout계열의 페이지로 아니면 login계열의 페이지을 불러와 메인화면에 띄웁니다. -->
 		<% if(id != null) {%>
 			<jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
 		<%} else {%>
@@ -41,6 +44,7 @@
 		<%} else {%>
 			<jsp:include page="/WEB-INF/view/login_out_object/midObjectlogout.jsp"/>
 		<%} %>
+		<!-- 롤링배너가 돌아가는 부분입니다. CSS로 돌아가며, owlcarousel라는 제이쿼리전용 플러그인를 이용해, 작동하고 있습니다. -->
      		<div class="main_banner owl-carousel owl-theme">
      			<div class="item first">
      				<h2 class="title">5월 11일부터 6월 11까지 할인 중인 <strong class="em">인디 게임 지금 구매해서 즐겨보세요.</strong></h2>
@@ -137,6 +141,7 @@
         		</tr>
         	</table>
         </div>
+        <!-- 상단의 배너 표시 코드와 동일한 데이터 표시를 위해 조건문으로 구별해두었습니다.  -->
 		<% if(id != null) {%>
 			<jsp:include page="/WEB-INF/view/login_out/logoutTag.jsp"/>
 		<%} else {%>

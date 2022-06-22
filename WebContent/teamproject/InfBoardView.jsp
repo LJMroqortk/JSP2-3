@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <% 
+    	//아이디 체크을 위한 세션을 불러옵니다.
     	String usercheck = (String)session.getAttribute("checkid"); 
     %>
 <!DOCTYPE html>
@@ -18,6 +19,7 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+<!-- 그 가져온 세션을 변수에 집어 넣고 비교하여 수정 삭제 버튼의 보여주기 여부을 판단합니다.  -->
 <c:set var="checks" value="<%=usercheck%>"></c:set>
 	<jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
 		<c:if test="${checks eq dto.id}">
@@ -26,6 +28,8 @@
 		    	<input type="button" class = "btn btn-primary" value="삭제" onclick ="location.href='delete.in?title=${dto.title}'">
 		    </div>
 		</c:if>
+		<!-- 정보글에서 목록으로 넘어가기 위한 컨트롤러 부분입니다.  -->
+		<!-- 데이터는 리스트에서 지정한 데이터를 세션으로 가져와 뿌려줍니다.  -->
 	<form action="InfBoardList.in" method="post">
 		
   	 <div>
@@ -40,39 +44,5 @@
 		<input id="board_btn_back"type="submit" class="btn btn-primary" value="정보 게시판 목록 으로 돌아가기"></input>
 		<div id="title_uploadfile">파일 : <a id="title_text_uplodfile" download href="/fileupload/uploadfiles/${dto.filename}">${dto.filename}</a></div>
 	</form>
-<!--  <div class="container">
-	<h2>정보게시판</h2>
-	<br/>
-	<form action="view.in" method="post">
-		<div>
-		 <table class="table table-striped table-hover">
-		  <tr>
-			<th>제목</th><td>${dto.title}</td>
-			<th>등록일</th><td>${dto.date}</td>
-		  </tr>
-		  <tr>
-		  	<th>작성자</th><td>${dto.id}</td>
-		  </tr>
-		  <tr>
-		   <th>내용</th>
-		   <th>${dto.textarea}</th>
-		  </tr>
-		  <tr>
-		  	<th>등록 파일</th>
-		  	<th><a download href="/fileupload/uploadfiles/${dto.filename}">${dto.filename}</a></th>
-		  <tr>
-		   <td colspan="4">
-		    <button type="button" class="btn btn-primary" onclick="location.href='InfBoardList.in'">글 목록보기</button>
-		    <br/>
-		    <br/>
-		    <input type="button" class ="btn btn-primary" value="수정" onclick ="location.href='InfBoardUpdate.in'">
-		    <input type="button" class = "btn btn-primary" value="삭제" onclick ="location.href='delete.in?title=${dto.title}'">
-		   </td>
-		  </tr>
-		</table>
-		</div>
-	</form>
-</div>-->
-
 </body>
 </html>

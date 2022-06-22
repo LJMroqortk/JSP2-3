@@ -67,22 +67,22 @@ public class InfBoardDao {
 	
 	
 	public String getDate() {
-		//�̰� mysql���� ������ �ð��� �������� �ϳ��� ����
+		//이건 mysql에서 현재의 시간을 가져오는 하나의 문장
 		String sql = "SELECT NOW()";
 		try {
-			//���� �Լ����� ������ ���ٿ� �־ �������������� ���� pstmt���� (���� ����� ��ü�� �̿��ؼ� SQL������ ���� �غ�ܰ�� ������ش�.)
+			//각각 함수끼리 데이터 접근에 있어서 마찰방지용으로 내부 pstmt선언 (현재 연결된 객체를 이용해서 SQL문장을 실행 준비단계로 만들어준다.)
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			//rs���ο� ������ ���������� ������ ����� �����´�
+			//rs내부에 실제로 실행했을때 나오는 결과를 가져온다
 			rs = pstmt.executeQuery();
-			//����� �ִ°��� ������ ���� getString 1�� �ؼ� ������ �� ��¥�� ��ȯ�� �� �ְ� ���ش�.
+			//결과가 있는경우는 다음과 같이 getString 1을 해서 현재의 그 날짜를 반환할 수 있게 해준다.
 			if(rs.next()) {
 				return rs.getString(1);
 			}
 		} catch (Exception e) {
-			//���� �߻� ������ �ֿܼ� ���
+			//오류 발생 내용을 콘솔에 띄움
 			e.printStackTrace();
 		}
-		//�����ͺ��̽� �����ε� �����ؼ� �������� �� ���������⶧���� �������� �־��ش�.
+		//데이터베이스 오류인데 웬만해선 디비오류가 날 이유가없기때문에 빈문장으로 넣어준다.
 		return ""; 
 	}
 	
@@ -119,13 +119,13 @@ public class InfBoardDao {
 			int x = pstmt.executeUpdate();
 			
 			if(x < 1) {
-				System.out.println("���������� ��������ʾҽ��ϴ�.");
+				System.out.println("정상적으로 저장되지않았습니다.");
 			}else {
 				check=true;
 			}
 			pstmt.close();			
 		}catch(SQLException ex) {
-			System.out.println("SQL insert ���� : " + ex.getLocalizedMessage());
+			System.out.println("SQL insert 오류 : " + ex.getLocalizedMessage());
 			check=false;
 		}
 		return check;
@@ -141,13 +141,13 @@ public class InfBoardDao {
 			
 			int x = pstmt.executeUpdate();
 			if(x<1) {
-				System.out.println("���������� �������� �ʾҽ��ϴ�.");
+				System.out.println("정상적으로 저장되지않았습니다.");
 			}else {
 				check = true;
 			}
 			pstmt.close();
 		} catch (SQLException ex) {
-			System.out.println("SQL insert ���� : " + ex.getLocalizedMessage());
+			System.out.println("SQL delete 오류 : " + ex.getLocalizedMessage());
 			check=false;
 		}
 		return check;

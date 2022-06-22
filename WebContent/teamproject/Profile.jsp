@@ -24,13 +24,15 @@
 <title>마이페이지</title>
 </head>
 <body>
+	<!-- 내 회원정보를 볼 수 있는 곳입니다.  -->
+	<!-- 하단에는 로그인 상태일 때의 배너 표시입니다.   -->
 	<jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
 	<form name="Login" action="update.do" method="post">
 	<div id="update_box">
 		<h2 id="login_title">나의 회원정보</h2>
 
 			<img id="side"alt="" src="../images/board.png" width="50px" height="50px"> <br>
-			
+			<!-- 아래의 부분은 데이터를 안 넣어주면 포커스가 맞추도록 만든 것입니다. 또한 이전에 회원의 정보를 가져와 뿌려줍니다.  -->
 			<table id = "update_input">
 				<tr>
 				 	<th><span id="update_text">아아디 :</span></th>

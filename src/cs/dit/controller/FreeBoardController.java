@@ -25,12 +25,14 @@ public class FreeBoardController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".fr"));
 		String page = null;
+		// 컨트롤러 부분입니다. 각 조건문 마다 해당 조건문에 맞으면 실행시키도록 만들어 두었습니다.
+		// page라는 부분은 해당 조건문 이후 어느 페이지로 갈 지에 대한 경로 설정입니다.
 		
+		// 자유게시판 목록 / 자유게시판 작성폼 / 자유게시글 작성 / 자유게시글 뷰  / 자유게시글 삭제 / 자유게시글 업데이트 / 자유게시글 업데이트폼
 		if(com != null && com.trim().equals("FreeBoardList")) {
 			FreeBoardListService service = new FreeBoardListService();
 			service.execute(request, response);
-			page="FreeBoardList.jsp";
-			
+			page="FreeBoardList.jsp";	
 		}else if(com != null && com.trim().equals("FreeBoardInsertForm")) {
 			page="FreeBoardInsertForm.jsp";
 			

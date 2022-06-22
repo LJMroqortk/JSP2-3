@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+<!-- 지유게시판 작성 Form 부분  -->
+
   <form action="insert.fr" method="post">
   	  <jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
   	 <div>

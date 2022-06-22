@@ -16,7 +16,7 @@ public class FreeBoardUpdateService implements FreeBoardService {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
+		// 자유게시판을 업데이트 하는 부분입니다. 날짜는 해당 수정 날짜를 기준으로 저장됩니다.
 		Date date = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String nowdate = simpleDateFormat.format(date);

@@ -18,6 +18,7 @@ public class InfBoardInsertService implements InfBoardService {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
+		//날짜는 당일 날짜로 아이디는 해당 유저의 아이디를 세션으로 가져와 넣어줍니다.
 		Date date = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		

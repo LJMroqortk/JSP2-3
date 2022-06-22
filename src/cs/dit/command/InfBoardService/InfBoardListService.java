@@ -15,7 +15,7 @@ public class InfBoardListService implements InfBoardService {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
+		//정보게시판의 글을 모두 표시해주는 코드입니다.
 		InfBoardDao dao = new InfBoardDao();
 		ArrayList<InfBoardDto> dtos = dao.list();
 		request.setAttribute("dtos", dtos);

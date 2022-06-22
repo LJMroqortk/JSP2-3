@@ -39,7 +39,10 @@ public class InfBoardController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".in"));
 		String page = null;
-		
+		// 컨트롤러 부분입니다. 각 조건문 마다 해당 조건문에 맞으면 실행시키도록 만들어 두었습니다.
+		// page라는 부분은 해당 조건문 이후 어느 페이지로 갈 지에 대한 경로 설정입니다.
+				
+		// 정보게시판 목록 / 정보게시판 작성폼 / 정보게시글 작성 / 정보게시글 뷰  / 정보게시글 삭제 / 정보게시글 업데이트 / 정보게시글 업데이트폼
 		if(com != null && com.trim().equals("InfBoardList")) {
 			InfBoardListService service = new InfBoardListService();
 			service.execute(request, response);

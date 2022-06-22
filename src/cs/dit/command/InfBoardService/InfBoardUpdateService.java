@@ -18,7 +18,7 @@ public class InfBoardUpdateService implements InfBoardService {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
+		// 날짜는 해당 날짜로 내용은 업데이트 폼에서 수정한 내용으로 DB의 내용을 변경하는 코드입니다.
 		Date date = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		

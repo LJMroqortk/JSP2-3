@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+<!-- 버튼으로 실행 시 데이터를 업데이트하여 DB에 있는 데이터을 변경시커는 컨트롤러에서 지정한 이름입니다.  -->
+<!-- 아래의 데이터는 리스트에서 저장해둔 세션으로 데이터를 뿌려줍니다. -->
  <form action="update.in" method="post" entype="nultipart/form-data">
   	  <jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
   	 <div>

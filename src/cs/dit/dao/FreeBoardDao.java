@@ -64,29 +64,6 @@ public class FreeBoardDao {
 		return dtos;		
 	}
 	
-	/*public FreeBoardDto selectOne(String title) {
-		String sql = "select * From freeboard where title=?";
-		FreeBoardDto dto = new FreeBoardDto();
-		try(
-				Connection con = getConnection();
-				PreparedStatement pstmt = con.prepareStatement(sql);
-			)
-		{
-			pstmt.setString(1, title);
-			try(ResultSet rs = pstmt.executeQuery();)
-			{
-				rs.next();
-				
-				dto.setTitle(title);
-				dto.setId(rs.getString("id"));
-				dto.setDate(rs.getString("date"));
-			}
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return dto;
-	}
-	*/
 	public String getDate() {
 		//이건 mysql에서 현재의 시간을 가져오는 하나의 문장
 		String sql = "SELECT NOW()";

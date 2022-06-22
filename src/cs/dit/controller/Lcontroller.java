@@ -28,6 +28,10 @@ public class Lcontroller extends HttpServlet {
 		String uri = request.getRequestURI().toString();
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".do"));
 		String page = null;
+		// 컨트롤러 부분입니다. 각 조건문 마다 해당 조건문에 맞으면 실행시키도록 만들어 두었습니다.
+		// page라는 부분은 해당 조건문 이후 어느 페이지로 갈 지에 대한 경로 설정입니다.
+				
+		// 로그인 / 로그아웃 / 회원가입 / 회원정보 확인  / 회원정보 업데이트 / 회원탈퇴
 		if(com != null && com.trim().equals("loginPro")) {
 			selectLogin login = new selectLogin();
 			login.execute(request, response);

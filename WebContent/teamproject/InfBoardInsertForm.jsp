@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="../css/styledata.css">
 </head>
 <body>
+<!-- 정보게시판 작성 Form 부분  -->
+<!-- 컨트롤러에서 지정해둔 insert.in을 통해 실행시킵니다. 정보게시글 작성한걸 DB에 등록하는 역할입니다.  -->
  <form action="insert.in" method="post" entype="nultipart/form-data">
   	  <jsp:include page="/WEB-INF/view/login_out/logoutimg.jsp"/>
   	 <div>
