@@ -2,7 +2,7 @@
 	 .main_banner {
 	 	position: relative;
 	 	left: 20px;
-    	top: 200px;
+    	top: 265px;
     	width: 1000px;
     	height: 250px;
 	 }
@@ -70,13 +70,14 @@
 	 }
 	 .main_banner .item .title {
 	 	display: inline-block;
+	 	font-family: 'Jua', sans-serif;
 	 	vertical-align: text-top;
-	 	line-height: 60px;
-	 	font-size: 50px;
+	 	line-height: 45px;
+	 	font-size: 30px;
 	 	letter-spacing: -2.5px;
 	 	font-weight: normal;
 	 	position: relative;
-	 	top: -200px;
+	 	top: -140px;
 	 }
 	 .main_banner .item .title .em {
 	 	display: block;
@@ -103,13 +104,14 @@
 	 */
 	 .main_banner .item .subtitle{
 	 	display: block;
+	 	font-family: 'Black Han Sans', sans-serif;
 	 	vertical-align: top;
 	 	margin-top: 20px;
-	 	font-size: 24px;
+	 	font-size: 18px;
 	 	line-height: normal;
 	 	letter-spacing: -1.2px;
 	 	position: relative;
-	 	top: -220px;
+	 	top: -160px;
 	 }
 	 
 	 @media screen and (max-width: 998px){
@@ -224,95 +226,361 @@
     	left: 1050px;
     	top: 70px;
     }
-    /*공지사항 배너 스타일 설정*/
+    /*메인 페이지 CSS 설정*/
     #benana {
     	position: absolute;
     }
     #main{
     	font-family: 'Black Han Sans', sans-serif;
-    	border: solid 10px #483d8b;
-    	border-radius: 20px;
+    	border: solid 10px none;
     	position: absolute;
     	left: 20px;
-    	top: 480px;
+    	top: 545px;
      	width: 1000px;
      	height: 500px;
      	padding: 50px;
-        background-color:#20B2AA;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color:#FFFFFF;
         overflow: auto;
     }
     #login{
         font-family: 'Black Han Sans', sans-serif;
-        border: solid 10px #483d8b;
-    	padding: 10px;
-    	border-radius: 20px;
+        border: solid 5px none;
+    	border-radius: 5px;
     	position: absolute;
     	left: 1050px;
-    	top: 200px;
+    	top: 265px;
     	width: 450px;
-        height: 100px;
+        height: 200px;
         text-align: center;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        background-color:#F5DA81;
+        background-color: #FFFFFF;
     }
-    
+    #login_btn {
+    	margin-top : 80px;
+    }
+    #login_text{
+    	position: relative;
+    	top: 60px;
+    	padding: 10px;
+    	border-radius: 5px;
+    	background-color: #F2E0F7;
+    }
     #menu{
-    	border-radius: 20px;
-    	border: solid 10px #483d8b;
+    	border-radius: 5px;
+    	border: solid 10px none;
     	position: absolute;
     	text-align: center;
     	left: 1050px;
-    	top: 330px;
+    	top: 480px;
     	width: 450px;
-        height:650px;
-        background-color:#20B2AA;
+        height:565px;
+        background-color: #FFFFFF;
     }
-    #hrbar{
-		border: solid 10px;
-		margin: 3px;
-    }
-	#menubox{
-		border-radius: 10px;
-		font-family: 'Black Han Sans', sans-serif;
-		background-color: #f5a4aa;
-		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-		padding: 5px;
-		padding-bottom: 15px;
-	}
-    #insert{
-    	position: absolute;
-    	padding: 300px;
-    	left: 500px;
-    	top: 300px;
-    	background-color: silver;
-    }
-    .loginpage{
+    #menu_text {
     	position: relative;
+    	top: 50px;
     	font-family: 'Black Han Sans', sans-serif;
-    	background-color:#20B2AA;
-    	border-radius: 100px;
-    	top:250px;
-    	left:602px;
-    	width: 300px;
-    	height: 530px;
-    	padding-top: 10px;
-    	text-align: center;
+    	font-size: 30px;
     }
-    #side{
-    	margin: 10px;
-    	border-radius: 10px;
-    	text-align: center;
+    #menu_img {
+    	position: relative;
+    	top: 100px;
     }
+    #menu_hr{
+    	position: relative;
+    	top: 60px;
+    	border-top: 3px dashed red;
+    }
+    #selectone {
+    	position: absolute;
+    	left: 1300px;
+    }
+    #selecttwo {
+    	position: absolute;
+    	left: 1350px;
+    }
+   	/*로그인 화면 및 회원가입 CSS 설정*/
     #login_box{
-    	border-radius: 100px;
-    	background-color: #f5a4aa;
+    	font-family: 'Jua', sans-serif;
+    	border-radius: 10px;
+    	background-color: none;
+    	border: 10px solid #BDBDBD;
     	position: absolute;
     	top: 200px;
     	left: 550px;
     	width: 400px;
-    	height: 600px;
+    	height: 500px;
+    	padding: 20px;
     	text-align: center;
+    	color: #BDBDBD;
+    }
+    #login_title{
+    	font-family: 'Do Hyeon', sans-serif;
+    	font-size: 25px;
+    }
+    #input_bar{
+    	margin: 10px;
+    	border-radius: 10px;
+    	width: 200px;
+    }
+    #login_set {
+    	margin-top: 20px; 
+    	width: 300px;
+    	font-size: 20px;
+    }
+    /*게시판 작성 CSS 설정*/
+    #board_title{
+    	font-family: 'Black Han Sans', sans-serif;
+    	font-size: 50px;
+    	position: absolute;
+    	top: 250px;
+    	left: 650px;
+    	color: #ffffff;
+    }
+    #title_pos_one{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 340px;
+    	left: 270px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_pos_two{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 340px;
+    	left: 150px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_input_one{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	width: 850px;
+    	color: #000000;
+    }
+    #title_input_two{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	width: 200px;
+    	color: #000000;
+    }
+    #title_text_one{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 850px;
+    	color: #000000;
+    }
+    #title_text_two{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 200px;
+    	color: #000000;
+    }
+    #text_area_box{
+    	display: block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	top: 410px;
+    	left: 270px;
+    	width: 931.6px;
+    	height: 500px;
+    	border-radius: 5px;
+    	overflow: auto;
+    }
+    #text_area_view{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	top: 490px;
+    	left: 150px;
+    	width: 1221.6px;
+    	height: 500px;
+    	background-color: #ffffff;
+    	border-radius: 5px;
+    	overflow: auto;
+    }
+    #title_id {
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 150px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_id {
+        display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 300px;
+    	color: #000000;
+    }
+    #title_count{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 1021.6px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_count{
+        display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 250px;
+    	color: #000000;
+    }
+    #board_btn{
+    	position: absolute;
+    	top: 930px;
+    	left: 1141.6px;
+    }
+    #board_btn_back{
+    	position: absolute;
+    	top: 1000px;
+    	left: 600px;
+    }
+    #btn_back_index{
+    	position: absolute;
+    	top: 930px;
+    	left: 270px;
+    }
+	#update_box{
+		font-family: 'Jua', sans-serif;
+    	border-radius: 10px;
+    	background-color: none;
+    	border: 10px solid #BDBDBD;
+    	position: absolute;
+    	top: 200px;
+    	left: 350px;
+    	width: 700px;
+    	height: 850px;
+    	padding: 20px;
+    	text-align: center;
+    	color: #BDBDBD;
+	}
+	#update_input #update_input_bar{
+		text-align: center;
+	}
+	#update_text{
+		font-family: 'Black Han Sans', sans-serif; 
+		font-size: 25px;
+		position: relative;
+		left: 170px;
+	}
+	#update_input_bar{
+		position: relative;
+		left: 170px;
+		margin: 10px;
+    	border-radius: 10px;
+    	width: 200px;
+	}
+	#update_set {
+		position: relative;
+		top: 300px;
+    	margin-top: 20px; 
+    	width: 300px;
+    	font-size: 20px;
+    }
+    #board_change_input{
+    	position: absolute;
+    	left:1250px;
+    	top: 290px;
+    }
+    #freeboard_list{
+    	position: absolute;
+    	top: 400px;
+    	left: 250px;
+    	width: 1000px;
+    	height: 250px;
+    	background-color: #ffffff;
+    	overflow: auto;
+    }
+    #free_banner{
+    	position: absolute;
+    	left: 250px;
+    	top: 200px;
+    	width:1000px;
+    	height: 200px;
+    }
+    #title_uploadfile{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 990px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_uplodfile{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 300px;
+    	color: #000000;
+    }
+    #infboard_list{
+    	position: absolute;
+    	top: 400px;
+    	left: 250px;
+    	width: 1000px;
+    	height: 250px;
+    	background-color: #ffffff;
+    	overflow: auto;
+    }
+    #inf_board_title{
+    	font-family: 'Black Han Sans', sans-serif;
+    	font-size: 50px;
+    	position: absolute;
+    	top: 250px;
+    	left: 580px;
+    	color: #ffffff;
+    }
+    #upload_btn{
+    	position: absolute;
+    	left: 400px;
+    	top: 915px;
+    	padding: 10px;
+    	
     }
     #userlist{
     	border-radius: 10px;
@@ -336,4 +604,7 @@
     	height: 100px;
     	padding: 30px;
     	text-align: center;
+    }
+    .box{
+    	margin: 10%;
     }
